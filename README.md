@@ -8,4 +8,5 @@ Simple Java program that outputs the answer to www.powerlanguage.co.uk/wordle fo
 ## Run
 
 `cd DailyWordleAnswer`
+
 `java Wordle`
