@@ -6,6 +6,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public class Wordle {
+	// answers enumerated from https://www.powerlanguage.co.uk/wordle/main.e65ce0a5.js
 	private static String[] words ={"cigar","rebut","sissy","humph","awake","blush","focal",
 	                           "evade","naval","serve","heath","dwarf","model","karma",
 	                           "stink","grade","quiet","bench","abate","feign","major",
@@ -339,9 +340,9 @@ public class Wordle {
 	
 	private static List<String> wordList = Arrays.asList(words);
 	
-	//based on the fact that "Crimp" is the word for 2021-01-23
+	//based on the fact that "crimp" is the word for 2021-01-23
 	private static LocalDate firstDate = LocalDate.of(2021, 6, 19);
-	private static LocalDate lastDate = firstDate.plusDays(wordList.size() - 1);
+	private static LocalDate lastDate = firstDate.plusDays(wordList.size() - 1); // some day in 2027
 	
 	private static String wordToday() {
 		LocalDate today = LocalDate.now();
@@ -356,11 +357,12 @@ public class Wordle {
 	}
 	
     public static void main(String[] args) {
-    	/*FileWriter wordFile = null;
+    	//Uncomment the following codeblock to store the answers to a text file
+	/*FileWriter wordFile = null;
     	try {
     		wordFile = new FileWriter("words.txt");
     		
-    		for(int i = 218; i < wordList.size(); i++) {
+    		for(int i = 0; i < wordList.size(); i++) {
         		wordFile.append(wordList.get(i) + "\n");
         	}
     		
@@ -368,6 +370,7 @@ public class Wordle {
     	} catch(IOException e) {
     		System.err.println(e.getMessage());
     	}*/
+	    
     	System.out.println(wordToday());
     }
 }
